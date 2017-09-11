@@ -6,7 +6,11 @@
 function click(e) {
   chrome.tabs.executeScript(null,
     //   {code:"document.body.style.backgroundColor='" + e.target.id + "'"}
-      {code:"document.getElementById('login-button').click();"});
+    //   {code:"document.getElementById('login-button').click();"});
+    {code:"var box1 = document.getElementById('mainForm:yearSemDropDown'); \
+            box1.value = 1495;\
+            document.getElementById('mainForm:nextButton').click();\
+      "});
   window.close();
 }
 
